@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    font-family: monospace;
+}
+div.snake {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    h1 {
+        text-align: center;
+    }
+
+    input {
+        margin: 3px;
+    }
+}
+
+@keyframes wave {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+input.wave {
+    animation: wave .4s cubic-bezier(.17, .67, .83, .67)
+}
